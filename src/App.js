@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react"
 
 function App() {
   const [items, setItems] = useState(["Placeholder"]);
@@ -13,6 +14,7 @@ function App() {
 
 
   return (
+    <ChakraProvider>
     <div className="App">
       <div>
         <h1>Push Your Gov</h1>
@@ -22,6 +24,8 @@ function App() {
         <button onClick={() => addItem(inputValue)}>Submit</button>
       </div>
     </div>
+  </ChakraProvider>
+
 
   );
 }
